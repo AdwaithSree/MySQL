@@ -1,0 +1,6 @@
+INSERT INTO `books` (`Book_Id`, `Title`, `Author`, `Price`, `Stock`) VALUES
+(1, 'Learn SQL', 'John Smith', 450, 12),
+(2, 'Mastering Python', 'Jane Doe', 600, 3);
+UPDATE books SET price = price + 50, stock = 12 WHERE title = 'Learn SQL';
+UPDATE books SET stock = stock - 2 WHERE price > 500;
+DELETE FROM books WHERE book_id = 3;
