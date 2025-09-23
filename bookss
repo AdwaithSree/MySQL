@@ -1,0 +1,18 @@
+INSERT INTO bookss(id, title, author, price, stock)
+VALUES (1, 'The Alchemist', 'Paulo Coelho', 350, 50),
+(2, 'Atomic Habits', 'James Clear', 450, 40),
+(3, 'The Psychology of Money', 'Morgan Housel', 400, 30),
+(4, 'Ikigai', 'Francesc Miralles', 300, 60),
+(5, 'Deep Work', 'Cal Newport', 500, 20);
+SELECT *FROM bookss
+WHERE price < 450 AND stock > 30;
+UPDATE bookss
+SET stock = 45, price = 420
+WHERE title = 'Deep Work';
+DELETE FROM bookss
+WHERE title = 'Ikigai';
+SELECT AVG(price) AS average_price, COUNT(*) AS total_bookss
+FROM bookss;
+SELECT *FROM bookss
+ORDER BY price DESC
+LIMIT 3;
